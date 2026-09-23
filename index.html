@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07090d">
+  <title>OPERACIÓN: ¿QUÉ PODRÍA MALIR SAL?</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="scanlines"></div>
+  <div id="boot" class="screen boot-screen">
+    <div class="terminal">
+      <div class="terminal-line">INITIALIZING EVENT PROTOCOL<span class="blink">_</span></div>
+      <div class="progress"><span id="bootProgress"></span></div>
+      <div id="bootLog" class="boot-log"></div>
+    </div>
+  </div>
+
+  <main id="app" class="hidden">
+    <section id="gate" class="screen gate-screen">
+      <div class="hud top-left">SYS//OQMPS-2026</div>
+      <div class="hud top-right">ACCESS: RESTRICTED</div>
+      <div class="gate-card">
+        <div class="classified">/// EVENTO CLASIFICADO ///</div>
+        <div class="eyebrow">OPERACIÓN</div>
+        <h1>¿QUÉ PODRÍA<br><span>MALIR SAL?</span></h1>
+        <p class="subtitle">Una reunión de personas con demasiada confianza en sus propias decisiones.</p>
+        <div class="access-box">
+          <label for="accessCode">INTRODUZCA SU CÓDIGO DE AUTORIZACIÓN</label>
+          <div class="code-row">
+            <input id="accessCode" maxlength="14" autocomplete="off" spellcheck="false" placeholder="P8-XXXX-XXX">
+            <button id="accessBtn">ACCEDER</button>
+          </div>
+          <p id="accessError" class="error"></p>
+        </div>
+        <div class="microcopy">No comparta su código. O compártalo. Total, esto no es seguridad real.</div>
+      </div>
+    </section>
+
+    <div id="site" class="hidden">
+      <header class="nav">
+        <div class="brand">OQPMS<span>//26</span></div>
+        <nav>
+          <a href="#briefing">BRIEFING</a>
+          <a href="#powerpoint">POWERPOINT</a>
+          <a href="#dress-code">VESTIMENTA</a>
+          <a href="#games">JUEGOS</a>
+          <a href="#location">UBICACIÓN</a>
+        </nav>
+        <div class="agent">AGENTE <span id="agentNumber">--</span> <b>●</b></div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="hud hero-status">STATUS: <span>ACTIVE</span></div>
+        <div class="hero-copy">
+          <p class="eyebrow glitch-text">OPERACIÓN // 11.10.2026</p>
+          <h2>¿QUÉ PODRÍA<br><em>MALIR SAL?</em></h2>
+          <p class="lead">El evento social que claramente necesitaba un sistema de acceso restringido.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#briefing">INICIAR BRIEFING</a>
+            <a class="btn ghost" href="#countdown">VER CUENTA REGRESIVA</a>
+          </div>
+        </div>
+        <div class="floating-shapes" aria-hidden="true">
+          <span class="shape die">⚄</span>
+          <span class="shape card">♠</span>
+          <span class="shape warning">!</span>
+          <span class="shape cursor">_</span>
+        </div>
+      </section>
+
+      <section id="briefing" class="section briefing">
+        <div class="section-index">01 // BRIEFING</div>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">ACCESO AUTORIZADO ✓</p>
+            <h3>OBJETIVO<br><span>DE LA OPERACIÓN</span></h3>
+          </div>
+          <div class="stamp">N<br><small>AGENTES</small></div>
+        </div>
+        <div class="brief-grid">
+          <div class="terminal-card">
+            <div class="terminal-head"><span>mission.log</span><span>● REC</span></div>
+            <p>Reunir a un grupo de agentes el domingo 11 de octubre de 2026 a las 17:00 para ejecutar una serie de actividades de dudosa importancia.</p>
+            <p class="flex-note">La operación no tiene un número fijo de agentes. El grupo puede crecer o reducirse.</p><div class="checklist">
+              <div>✓ JUEGOS DE MESA</div>
+              <div>✓ COMIDA</div>
+              <div>✓ BEBIDAS</div>
+              <div>✓ MÚSICA</div>
+              <div>✓ POWERPOINT</div>
+              <div>✓ COMPETENCIA INNECESARIA</div>
+            </div>
+          </div>
+          <div class="warning-card">
+            <div class="warning-icon">!</div>
+            <h4>ADVERTENCIA</h4>
+            <p>La organización no se responsabiliza por traiciones durante Risk, acusaciones sin fundamento durante Clue ni amistades destruidas durante UNO.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="powerpoint" class="section power-section">
+        <div class="section-index">02 // POWERPOINT NIGHT™</div>
+        <div class="power-title">
+          <p class="eyebrow">PROTOCOLO PRINCIPAL</p>
+          <h3>UNA NOCHE.<br><span>MUCHAS PRESENTACIONES.</span></h3>
+          <div class="big-number">~10<span>MIN</span></div>
+        </div>
+        <div class="rules">
+          <article><b>01</b><h4>PRESENTACIÓN OBLIGATORIA</h4><p>Cada agente deberá preparar un PowerPoint.</p></article>
+          <article><b>02</b><h4>TEMA LIBRE</h4><p>Puede ser interesante, inútil, absurdo o inexplicablemente específico.</p></article>
+          <article><b>03</b><h4>~10 MINUTOS</h4><p>Tiempo aproximado por exposición. No convierta esto en una TED Talk.</p></article>
+          <article><b>04</b><h4>DEFENDER LO INDEFENDIBLE</h4><p>La evidencia dudosa está permitida. La seguridad absoluta es recomendada.</p></article>
+        </div>
+        <div class="idea-machine">
+          <div>
+            <p class="eyebrow">¿SIN TEMA?</p>
+            <h4>GENERADOR DE IDEAS INNECESARIAS</h4>
+          </div>
+          <div class="idea-display" id="ideaDisplay">Presione el botón y acepte su destino.</div>
+          <button class="btn primary" id="ideaBtn">GENERAR TEMA</button>
+        </div>
+        <div class="timer-panel">
+          <div>
+            <p class="eyebrow">HERRAMIENTA DE CAMPO</p>
+            <h4>CRONÓMETRO DE EXPOSICIÓN</h4>
+            <p>Diseñado para ser usado durante la noche.</p>
+          </div>
+          <div class="timer">10:00</div>
+          <div class="timer-actions">
+            <button class="btn primary small" id="timerStart">INICIAR</button>
+            <button class="btn ghost small" id="timerPause">PAUSAR</button>
+            <button class="btn ghost small" id="timerReset">REINICIAR</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="games" class="section games-section">
+        <div class="section-index">03 // ENTRETENIMIENTO</div>
+        <p class="eyebrow">PROTOCOLO DE JUEGO</p>
+        <h3>ZONA DE<br><span>CAOS CONTROLADO</span></h3>
+        <div class="games-grid">
+          <article class="game-card red" data-game="risk" tabindex="0" role="button"><span>MISSION 01</span><h4>RISK</h4><p>Diplomacia, estrategia y la posibilidad de que alguien se lo tome demasiado en serio.</p><div>STRATEGY // HIGH</div></article>
+          <article class="game-card blue" data-game="clue" tabindex="0" role="button"><span>MISSION 02</span><h4>CLUE</h4><p>Alguien lo hizo. En algún lugar. Con algo.</p><div>MYSTERY // ACTIVE</div></article>
+          <article class="game-card yellow" data-game="uno" tabindex="0" role="button"><span>MISSION 03</span><h4>UNO</h4><p>La amistad será puesta a prueba.</p><div>FRIENDSHIP // UNSTABLE</div></article>
+          <article class="game-card purple" data-game="unoflip" tabindex="0" role="button"><span>MISSION 04</span><h4>UNO FLIP</h4><p>Porque aparentemente UNO normal no era suficiente.</p><div>CHAOS // ELEVATED</div></article>
+          <article class="game-card classified"><span>MISSION 05</span><h4>???</h4><p>Más juegos serán revelados.</p><div>STATUS // CLASSIFIED</div></article>
+        </div>
+      </section>
+
+
+      <section id="dress-code" class="section dress-code-section">
+        <div class="section-index">04 // PROTOCOLO DE VESTIMENTA</div>
+        <div class="section-title-row">
+          <h3>DRESS CODE: <span>LO QUE SE TE DÉ LA GANA</span></h3>
+          <span class="status-chip">NO RULES DETECTED</span>
+        </div>
+
+        <div class="dress-code-grid">
+          <div class="panel dress-main">
+            <div class="panel-tag">VESTIMENTA // CLASIFICACIÓN: IRRELEVANTE</div>
+            <p class="dress-lead">
+              Tras una exhaustiva evaluación del comité de operaciones, se determinó
+              que no existen requisitos de vestimenta para este evento.
+            </p>
+            <p>
+              Puedes venir formal, casual, en pijama, disfrazado, con tu camiseta
+              favorita o con lo primero que encontraste en la silla.
+            </p>
+
+            <div class="dress-requirement">
+              <span class="requirement-label">ÚNICO REQUISITO:</span>
+              <strong>Que puedas sentarte cómodamente durante una partida de Risk.</strong>
+            </div>
+
+            <div class="dress-icons">
+              <span>🎲 jugar</span>
+              <span>🍕 comer</span>
+              <span>🥤 beber</span>
+              <span>🎤 defender una presentación absurda</span>
+            </div>
+
+            <div class="dress-final">TODO ES LEGAL.</div>
+          </div>
+
+          <div class="panel dress-status">
+            <div class="panel-tag">DRESS CODE COMPLIANCE</div>
+            <div class="compliance-bar"><span></span></div>
+            <div class="compliance-value">100%</div>
+
+            <div class="terminal-lines">
+              <div><span>STATUS:</span> NO RULES DETECTED</div>
+              <div><span>THREAT LEVEL:</span> OUTFIT IRRELEVANT</div>
+              <div><span>FORMALITY:</span> OPTIONAL</div>
+              <div><span>JUDGEMENT:</span> DISABLED</div>
+            </div>
+
+            <div class="classified-stamp">APPROVED</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section supplies">
+        <div class="section-index">04 // SUMINISTROS</div>
+        <div class="supply-grid">
+          <div class="supply-card">
+            <span class="icon">🍕</span><p class="eyebrow">FOOD STATUS</p>
+            <h4>PENDIENTE</h4><div class="meter"><span></span></div><small>El menú será desclasificado próximamente.</small>
+          </div>
+          <div class="supply-card">
+            <span class="icon">🥤</span><p class="eyebrow">DRINK STATUS</p>
+            <h4>PENDIENTE</h4><div class="meter"><span></span></div><small>Selección todavía bajo investigación.</small>
+          </div>
+          <div class="supply-card">
+            <span class="icon">🎧</span><p class="eyebrow">SOUNDTRACK</p>
+            <h4>CLASIFICADO</h4><div class="meter active"><span></span></div><small>La playlist será revelada.</small>
+          </div>
+        </div>
+      </section>
+
+      <section id="location" class="section location-section">
+        <div class="section-index">05 // PUNTO DE ENCUENTRO</div>
+        <div class="location-grid">
+          <div>
+            <p class="eyebrow">COORDENADAS CONFIRMADAS</p>
+            <h3>TORRES DE<br><span>SAN VICENTE</span></h3>
+            <div class="address-box">
+              <strong>APARTAMENTO 1303 A</strong>
+              <span>DOMINGO · 11 OCTUBRE 2026</span>
+              <span>17:00 HORAS</span>
+            </div>
+            <a class="btn primary" target="_blank" rel="noopener" href="https://maps.app.goo.gl/7QZzfnhvuPWG22cQ8">ABRIR UBICACIÓN ↗</a>
+          </div>
+          <div class="map-placeholder">
+            <div class="radar"></div>
+            <div class="map-label">TARGET LOCKED<br><b>1303 A</b></div>
+            <div class="crosshair">+</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="countdown" class="section countdown-section">
+        <div class="section-index">06 // CUENTA REGRESIVA</div>
+        <p class="eyebrow">T-MINUS</p>
+        <h3>HASTA QUE TODO<br><span>EMPIECE A MALIR SAL</span></h3>
+        <div class="countdown">
+          <div><strong id="days">00</strong><span>DÍAS</span></div>
+          <i>:</i>
+          <div><strong id="hours">00</strong><span>HORAS</span></div>
+          <i>:</i>
+          <div><strong id="minutes">00</strong><span>MINUTOS</span></div>
+          <i>:</i>
+          <div><strong id="seconds">00</strong><span>SEGUNDOS</span></div>
+        </div>
+      </section>
+
+      <section class="section rsvp">
+        <div class="section-index">07 // ESTADO DEL AGENTE</div>
+        <p class="eyebrow">CONFIRMACIÓN REQUERIDA</p>
+        <h3>¿VAS A<br><span>VENIR?</span></h3>
+        <p class="rsvp-copy">Su participación es importante para alcanzar el nivel adecuado de caos.</p>
+        <div class="rsvp-actions">
+          <button class="btn primary huge" id="yesBtn">SÍ, OBVIAMENTE</button>
+          <button class="btn ghost huge" id="noBtn">NO, SOY ABURRIDO</button>
+        </div>
+        <div id="rsvpMessage" class="rsvp-message"></div>
+      </section>
+
+      <footer>
+        <div>OPERACIÓN: ¿QUÉ PODRÍA MALIR SAL?</div>
+        <div>11.10.2026 // 17:00</div>
+        <div>STATUS: <span>PROBABLY FINE</span></div>
+      </footer>
+    </div>
+  </main>
+
+
+  <div id="gameModal" class="game-modal hidden">
+    <div class="game-modal-backdrop"></div>
+    <div class="game-modal-card">
+      <button id="gameModalClose" class="modal-close" aria-label="Cerrar">×</button>
+      <div class="modal-code" id="modalCode">MISSION 01</div>
+      <p class="eyebrow" id="modalEyebrow">PROTOCOLO DE JUEGO</p>
+      <h3 id="modalTitle">RISK</h3>
+      <p class="modal-summary" id="modalSummary"></p>
+      <div class="modal-columns">
+        <div>
+          <h4>OBJETIVO</h4>
+          <p id="modalObjective"></p>
+        </div>
+        <div>
+          <h4>¿CÓMO SE JUEGA?</h4>
+          <p id="modalHow"></p>
+        </div>
+      </div>
+      <div class="modal-rules">
+        <h4>NORMAS BÁSICAS</h4>
+        <ul id="modalRules"></ul>
+      </div>
+      <div class="modal-tip" id="modalTip"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
