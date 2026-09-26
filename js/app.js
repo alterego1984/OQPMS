@@ -6,7 +6,8 @@ const ACCESS_CODES = {
   "P8-L7TR-83N": "Camila",
   "P8-W42K-9FD": "Daniel",
   "P8-H61P-Q8M": "Alejandro",
-  "P8-Z39X-4LK": "08"
+  "P8-Z39X-4LK": "Jennifer",
+  "P8-AAAA-BBB": "Daniel A."
 };
 
 const $ = (s) => document.querySelector(s);

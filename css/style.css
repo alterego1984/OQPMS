@@ -167,3 +167,25 @@ body.modal-open{overflow:hidden}
   .dress-code-grid { grid-template-columns: 1fr; }
   .dress-icons { flex-direction: column; }
 }
+
+/* =========================
+   AWARDS (POWERPOINT NIGHT)
+   ========================= */
+.awards-panel{border:1px solid #26313d;background:rgba(13,17,24,.75);padding:28px}
+.awards-head{margin-bottom:22px}
+.awards-head h4{font:600 14px "DM Mono",monospace;margin:0}
+.awards-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:30px}
+.award-card{border:1px solid #26313d;background:#0b0f15;padding:20px 10px;text-align:center;transition:.2s}
+.award-card:hover{border-color:rgba(168,255,62,.5);transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.award-icon{display:block;font-size:28px;margin-bottom:12px}
+.award-card h5{font:600 11px "DM Mono",monospace;letter-spacing:.05em;line-height:1.4;margin:0;color:var(--text)}
+.award-criteria{border-top:1px solid #26313d;padding-top:24px}
+.criteria-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.criteria-grid>div{display:flex;gap:12px;align-items:flex-start}
+.criteria-grid>div>span{font-size:20px;line-height:1.2}
+.criteria-grid b{display:block;font:600 12px "DM Mono",monospace;letter-spacing:.05em;color:var(--green);margin-bottom:4px}
+.criteria-grid small{color:#8f9aa7;line-height:1.55;font-size:12.5px}
+@media(max-width:800px){
+ .awards-grid{grid-template-columns:1fr 1fr}
+ .criteria-grid{grid-template-columns:1fr}
+}
