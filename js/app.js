@@ -124,7 +124,7 @@ $("#timerReset").addEventListener("click", () => {
   clearInterval(timerInterval); timerInterval = null; secondsLeft = 600; renderTimer();
 });
 
-const target = new Date("2026-10-11T17:00:00-05:00").getTime();
+const target = new Date("2026-10-10T17:00:00-05:00").getTime();
 function countdown() {
   const diff = Math.max(0, target - Date.now());
   const total = Math.floor(diff / 1000);
