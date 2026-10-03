@@ -229,19 +229,43 @@
 
       <section class="section supplies">
         <div class="section-index">05 // SUMINISTROS</div>
-        <div class="supply-grid">
-          <div class="supply-card">
-            <span class="icon">🍕</span><p class="eyebrow">FOOD STATUS</p>
-            <h4>PENDIENTE</h4><div class="meter"><span></span></div><small>El menú será desclasificado próximamente.</small>
+        <div class="supplies-grid">
+          <div class="supply-panel food">
+            <p class="eyebrow">🍕 ALIMENTACIÓN</p>
+            <h4>SUMINISTROS CONFIRMADOS</h4>
+            <ul class="supply-list">
+              <li><b>🍕 PIZZA</b><span>Suministro principal de la operación.</span></li>
+              <li><b>🥨 PASABOCAS</b><span>Para mantener al personal operativo activo.</span></li>
+              <li><b>🍿 SNACKS VARIOS</b><span>Porque aparentemente una partida de Risk puede durar horas.</span></li>
+              <li><b>🍰 ALGO DULCE</b><span>Para estabilizar los niveles de moral.</span></li>
+            </ul>
+            <p class="supply-status">ESTADO: ABASTECIMIENTO CONFIRMADO ✓</p>
           </div>
-          <div class="supply-card">
-            <span class="icon">🥤</span><p class="eyebrow">DRINK STATUS</p>
-            <h4>PENDIENTE</h4><div class="meter"><span></span></div><small>Selección todavía bajo investigación.</small>
+          <div class="supply-panel drink">
+            <p class="eyebrow">🥤 BEBIDAS</p>
+            <h4>SUMINISTROS DISPONIBLES</h4>
+            <ul class="supply-list simple">
+              <li>☕ Café</li>
+              <li>💧 Agua</li>
+              <li>🥤 Gaseosa</li>
+              <li>🍺 Cerveza</li>
+            </ul>
+            <div class="drink-requirement">
+              <p class="eyebrow">REQUERIMIENTO AL PERSONAL</p>
+              <p>Si tienes una bebida que te gusta especialmente, <b>tráela para compartir</b>.</p>
+              <p>La organización agradece cualquier aporte líquido que pueda mejorar las condiciones operativas del equipo.</p>
+            </div>
+            <div class="supply-tags">
+              <span class="tag">TRAER BEBIDA → OPCIONAL</span>
+              <span class="tag ok">COMPARTIR → ALTAMENTE RECOMENDADO</span>
+              <span class="tag danger">QUEDARSE CON TODA LA BEBIDA → SOSPECHOSO</span>
+            </div>
           </div>
-          <div class="supply-card">
-            <span class="icon">🎧</span><p class="eyebrow">SOUNDTRACK</p>
-            <h4>CLASIFICADO</h4><div class="meter active"><span></span></div><small>La playlist será revelada en el evento.</small>
-          </div>
+        </div>
+        <div class="soundtrack-strip">
+          <span class="icon">🎧</span><p class="eyebrow">SOUNDTRACK</p>
+          <span class="strip-label">CLASIFICADO</span>
+          <small>La playlist será revelada en el evento.</small>
         </div>
       </section>
 
